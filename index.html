@@ -4,14 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
-		<title>Bela léa</title>
+		<title>Belaléa</title>
 	</head>
 	<body>
 		<header>
 			<div class="logo">Belaléa</div>
 			<nav>
-				<a href="#">О нас</a>
-				<a href="#">КАТАЛОГ</a>
+				<a href="#!">О нас</a>
+				<div class="catalog-header">
+					<a href="#!">КАТАЛОГ</a>
+					<img class="catalog-arrow" src="./img/arrow.svg" alt="" />
+					<div class="dropdown-menu">
+						<a href="./pages/catalog/catalog.html">Продукты</a>
+						<a href="#">Аксессуары</a>
+					</div>
+				</div>
 				<a href="#">Диллерам</a>
 				<a href="#">Новости</a>
 			</nav>
@@ -125,25 +132,25 @@
 					</div>
 
 					<div class="products-grid">
-						<div class="product-card">
+						<div class="product-card__our">
 							<div class="product-params">
 								<img class="oil-img" src="./img/mmm.png" alt="" />
 							</div>
 							<h3 class="product-name">Мука рисовая 900г</h3>
 						</div>
-						<div class="product-card">
+						<div class="product-card__our">
 							<div class="product-params">
 								<img class="oil-img" src="./img/mmm.png" alt="" />
 							</div>
 							<h3 class="product-name">Мука рисовая 900г</h3>
 						</div>
-						<div class="product-card">
+						<div class="product-card__our">
 							<div class="product-params">
 								<img class="oil-img" src="./img/mmm.png" alt="" />
 							</div>
 							<h3 class="product-name">Мука рисовая 900г</h3>
 						</div>
-						<div class="product-card">
+						<div class="product-card__our">
 							<div class="product-params">
 								<img class="oil-img" src="./img/mmm.png" alt="" />
 							</div>
@@ -311,7 +318,6 @@
 			</div>
 		</section>
 
-		<!-- Добавить в конец body перед скриптами -->
 		<footer class="footer">
 			<div class="footer-container">
 				<div class="footer-columns">
@@ -358,6 +364,7 @@
 			</div>
 		</footer>
 		<script src="./script/swiper.js"></script>
+		<script src="./script/dropdown.js"></script>
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
