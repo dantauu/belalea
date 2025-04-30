@@ -59,14 +59,6 @@ header {
 	color: #274c5b;
 }
 
-.about-us-header__bg {
-	background-image: url('../../img/catalog-back.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 100px 0;
-	margin-bottom: 40px;
-}
-
 /* DROPDOWN */
 .dropdown-menu {
 	position: absolute;
@@ -129,8 +121,22 @@ nav a {
 	padding: 100px 0 70px 0;
 }
 
+.wrapper-container {
+	padding-top: 100px;
+}
+
+.about-us-header__bg {
+	background-image: url('../../../img/flour.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 100px 0;
+	margin-bottom: 40px;
+	background-size: cover;
+}
+
 .wrapper {
 	display: flex;
+	gap: 40px;
 }
 
 .left-part__wrapper {
