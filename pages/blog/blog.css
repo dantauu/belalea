@@ -1,0 +1,246 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+li {
+	list-style: none;
+}
+.container {
+	max-width: 1100px;
+}
+
+header {
+	padding: 30px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	background: white;
+	z-index: 100;
+}
+
+.mobile-menu-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: #274c5b;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+
+.catalog-header {
+	position: relative;
+	display: flex;
+	cursor: pointer;
+	gap: 10px;
+}
+
+.top-pad {
+	padding-top: 100px;
+}
+
+.catalog-arrow {
+	transform: rotate(90deg);
+	transition: all 0.2s ease;
+}
+
+.title-about__inner {
+	text-align: center;
+	font-size: 48px;
+	color: #274c5b;
+}
+
+.header-banner {
+	position: relative;
+	width: 100%;
+	padding: 100px 0;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+
+.header-banner-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.container-title__about {
+	position: relative;
+	z-index: 1;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	display: none;
+	flex-direction: column;
+	gap: 10px;
+	padding: 15px 20px;
+	min-width: 200px;
+	border-radius: 4px;
+	margin-top: 10px;
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: all 0.3s ease;
+}
+
+.dropdown-menu a {
+	color: #333;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+	color: #666;
+}
+
+.catalog-header.active .dropdown-menu {
+	display: flex;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.catalog-header.active .catalog-arrow {
+	transform: rotate(270deg);
+}
+
+.logo {
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+nav {
+	display: flex;
+	gap: 40px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #2d2d2d;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+/* Адаптивные стили */
+@media (max-width: 991px) {
+	.header-banner {
+		padding: 80px 0;
+	}
+
+	.title-about__inner {
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		padding: 20px;
+		height: 80px;
+	}
+
+	nav {
+		display: none;
+		position: fixed;
+		top: 80px;
+		left: 0;
+		width: 100%;
+		background: white;
+		flex-direction: column;
+		padding: 20px;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	nav.active {
+		display: flex;
+	}
+
+	.mobile-menu-toggle {
+		display: flex;
+	}
+
+	.mobile-menu-toggle.active span:nth-child(1) {
+		transform: translateY(9px) rotate(45deg);
+	}
+
+	.mobile-menu-toggle.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.mobile-menu-toggle.active span:nth-child(3) {
+		transform: translateY(-9px) rotate(-45deg);
+	}
+
+	.header-banner {
+		padding: 60px 0;
+	}
+
+	.title-about__inner {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 576px) {
+	.title-about__inner {
+		font-size: 28px;
+	}
+}
+
+/* FOOTER */
+.footer {
+	padding: 60px 0;
+	background: #f8f8f8;
+	font-family: Arial, sans-serif;
+}
+
+.footer-container {
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-columns {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+	flex-wrap: wrap;
+}
+
+.footer-section {
+	min-width: 250px;
+}
+
+/* Добавьте сюда все остальные стили для footer, если они есть */
