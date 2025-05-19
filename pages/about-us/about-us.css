@@ -314,7 +314,7 @@ nav a {
 	background-color: #1d3a45;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1167px) {
 	.contact-form {
 		grid-template-columns: 1fr;
 	}
@@ -331,6 +331,12 @@ nav a {
 
 	.about-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.main-image {
+		margin-top: 33px;
+		width: 327px;
+		height: 290px;
 	}
 }
 

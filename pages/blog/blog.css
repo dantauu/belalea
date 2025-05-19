@@ -20,7 +20,8 @@ li {
 	list-style: none;
 }
 .container {
-	max-width: 1100px;
+	max-width: 1495px;
+	margin: 0 auto;
 }
 
 header {
@@ -79,8 +80,9 @@ header {
 	position: relative;
 	width: 100%;
 	padding: 100px 0;
-	margin-bottom: 40px;
+	margin-bottom: 149px;
 	overflow: hidden;
+	top: 109px;
 }
 
 .header-banner-img {
@@ -155,6 +157,160 @@ nav a {
 	text-transform: uppercase;
 }
 
+/* FOOTER */
+.footer {
+	padding: 60px 0;
+	background: #f8f8f8;
+	font-family: Arial, sans-serif;
+}
+
+.footer-container {
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-columns {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+	flex-wrap: wrap;
+}
+
+.footer-section {
+	min-width: 250px;
+}
+
+/* MAIN */
+
+.cards-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 40px;
+	row-gap: 80px;
+	padding-bottom: 80px;
+}
+
+.card-item__back {
+	position: relative;
+}
+
+.card-inner {
+	width: 612px;
+	height: 243px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	left: 28px;
+	bottom: -29px;
+	background: #fff;
+	border-radius: 30px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.title-item__inner {
+	font-size: 24px;
+	color: #274c5b;
+	font-weight: 700;
+}
+
+.description-inner {
+	font-size: 16px;
+	color: #274c5b;
+	font-weight: 300;
+}
+
+.btn-read {
+	background: #274c5b;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 10px 20px;
+	border-radius: 15px;
+	border: none;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+/* FOOTER */
+.footer {
+	padding: 60px 0;
+	background: #f8f8f8;
+	font-family: Arial, sans-serif;
+}
+
+.footer-container {
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-columns {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+	flex-wrap: wrap;
+}
+
+.footer-heading {
+	font-size: 24px;
+	margin-bottom: 25px;
+	color: #333;
+}
+
+.contact-info p {
+	margin-bottom: 15px;
+	line-height: 1.6;
+	color: #666;
+}
+
+.social-text {
+	color: #666;
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+}
+
+.utility-pages {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.utility-pages a {
+	color: #666;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.utility-pages a:hover {
+	color: #333;
+}
+
+.social-icon__inner {
+	width: 40px;
+	height: 40px;
+}
+
+.social-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	width: 60px;
+	height: 60px;
+	background: #e3f7e8;
+}
+
 /* Адаптивные стили */
 @media (max-width: 991px) {
 	.header-banner {
@@ -213,34 +369,18 @@ nav a {
 	}
 }
 
+@media (max-width: 714px) {
+	.card-img {
+		width: 400px;
+	}
+	.card-inner {
+		width: 327px;
+		height: 170px;
+	}
+}
+
 @media (max-width: 576px) {
 	.title-about__inner {
 		font-size: 28px;
 	}
 }
-
-/* FOOTER */
-.footer {
-	padding: 60px 0;
-	background: #f8f8f8;
-	font-family: Arial, sans-serif;
-}
-
-.footer-container {
-	padding: 0 20px;
-	display: flex;
-	justify-content: center;
-}
-
-.footer-columns {
-	display: flex;
-	justify-content: space-between;
-	gap: 80px;
-	flex-wrap: wrap;
-}
-
-.footer-section {
-	min-width: 250px;
-}
-
-/* Добавьте сюда все остальные стили для footer, если они есть */
