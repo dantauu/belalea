@@ -72,13 +72,15 @@ header {
 .catalog-arrow {
 	transform: rotate(90deg);
 	transition: all 0.2s ease;
+	width: 10px;
+	height: 16px;
 }
 
 /* DROPDOWN */
 
 .dropdown-menu {
 	position: absolute;
-	top: 100%;
+	top: 32%;
 	left: 0;
 	background: white;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -122,6 +124,7 @@ header {
 
 nav {
 	display: flex;
+	align-items: center;
 	gap: 40px;
 }
 
@@ -869,5 +872,167 @@ nav a {
 	.cta-button {
 		width: 100%;
 		text-align: center;
+	}
+}
+
+/* Modal */
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.9);
+	background: white;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	max-width: 800px;
+	width: 90%;
+}
+
+.modal.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.modal-close::before,
+.modal-close::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #274c5b;
+}
+
+.modal-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-close::after {
+	transform: rotate(-45deg);
+}
+
+.login-btn {
+	padding: 10px 25px;
+	background: #274c5b;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 600;
+	transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+	background: #1d3a45;
+}
+
+/* Contact Form in Modal */
+.modal .contact-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.modal .form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.modal .form-group:nth-last-child(2) {
+	grid-column: span 2;
+}
+
+.modal .contact-form label {
+	font-size: 16px;
+	color: #274c5b;
+	font-weight: 600;
+}
+
+.modal .contact-form input,
+.modal .contact-form textarea {
+	padding: 15px;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	font-size: 16px;
+}
+
+.modal .contact-form textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.modal .submit-btn {
+	cursor: pointer;
+	width: 180px;
+	height: 60px;
+	border-radius: 15px;
+	background: #274c5b;
+	color: #fff;
+	font-weight: 700;
+	border: none;
+	font-size: 18px;
+	transition: background-color 0.3s;
+	grid-column: 1 / -1;
+	justify-self: center;
+}
+
+.modal .submit-btn:hover {
+	background-color: #1d3a45;
+}
+
+@media (max-width: 768px) {
+	.modal {
+		padding: 30px 20px;
+	}
+
+	.modal .contact-form {
+		grid-template-columns: 1fr;
+	}
+
+	.modal .form-group:nth-last-child(2) {
+		grid-column: 1;
+	}
+
+	.modal .submit-btn {
+		width: 100%;
 	}
 }
